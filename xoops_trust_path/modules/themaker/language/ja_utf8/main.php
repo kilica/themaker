@@ -35,7 +35,7 @@ define('_MD_THEMAKER_LANG_RIGHT_WIDTH', '右カラムの幅');
 define('_MD_THEMAKER_LANG_COLOR_PATTERN', 'カラーパタン');
 define('_MD_THEMAKER_LANG_LEFT_FLOAT', 'Left float');
 define('_MD_THEMAKER_LANG_COLOR_SCHEME', 'カラースキーム');
-define('_MD_THEMAKER_DESC_COLOR_SCHEME', 'テーマのカラースキームを http://colorschemedesigner.com/ で作り、"XML" フォーマットで "Export" してください。XMLのソースが表示されますので、それをコピーしてこのテキストエリアに貼り付けてください。');
+define('_MD_THEMAKER_DESC_COLOR_SCHEME', 'テーマのカラースキームを <a href="http://colorschemedesigner.com/" target="_blank">http://colorschemedesigner.com/</a> で作り、"XML" フォーマットで "Export" してください。XMLのソースが表示されますので、それをコピーしてこのテキストエリアに貼り付けてください。');
 define('_MD_THEMAKER_LANG_DESCRIPTION', 'テーマの説明');
 define('_MD_THEMAKER_LANG_POSTTIME', '作成日時');
 define('_MD_THEMAKER_LANG_ADD_A_NEW_SETTING', 'テーマを作る');

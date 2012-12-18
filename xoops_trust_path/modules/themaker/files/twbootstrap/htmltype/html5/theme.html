@@ -7,7 +7,6 @@
 <meta name="description" content="<{$xoops_meta_description}>" />
 <meta name="rating" content="<{$xoops_meta_rating}>" />
 <meta name="author" content="<{$xoops_meta_author}>" />
-<meta name="copyright" content="<{$xoops_meta_copyright}>" />
 <meta name="generator" content="XOOPS Cube" />
 <{if $xoops_dirname}>
   <title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
@@ -26,7 +25,7 @@
 
 <div id="PrimaryMenu" class="navbar"><div class="navbar-inner"><div class="container">
   <ul class="nav">
-    <a class="brand" href="<{$xoops_url}>/"><{$xoops_sitename}></a>
+    <li></li><a class="brand" href="<{$xoops_url}>/"><{$xoops_sitename}></a></li>
     <li<{if $xoops_dirname=="module1"}> class="active"<{/if}>><a href="#">menu1</a></li>
     <li<{if $xoops_dirname=="module2"}> class="active"<{/if}>><a href="#">menu2</a></li>
     <li<{if $xoops_dirname=="module3"}> class="active"<{/if}>><a href="#">menu3</a></li>
@@ -35,7 +34,7 @@
       <li><a href="#">sub-menu1</a></li>
     </ul>
     </li>
-    <form class="navbar-search pull-left"><input type="text" class="search-query" palceholder="Search"></form>
+    <li><form class="navbar-search pull-left"><input type="text" class="search-query" palceholder="Search"></form></li>
   </ul>
 </div></div></div><!-- PrimaryMenu -->
 
@@ -47,7 +46,7 @@
       <li<{if $xoops_dirname=="module2"}> class="active"<{/if}>><a href="#">menu2</a></li>
       <li<{if $xoops_dirname=="module3"}> class="active"<{/if}>><a href="#">menu3</a></li>
       <li class="<{if $xoops_dirname=="module4"}>active<{/if}> dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown">menu4<b class="caret"></b></b></a>
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">menu4<b class="caret"></b></a>
       <ul class="dropdown-menu">
         <li><a href="#">sub menu1</a></li>
       </ul>
