@@ -1,0 +1,20 @@
+CREATE TABLE `{prefix}_{dirname}_setting` (
+  `setting_id` int(11) unsigned NOT NULL  auto_increment,
+  `title` varchar(255) NOT NULL,
+  `uid` mediumint(8) unsigned NOT NULL,
+  `html_type` varchar(32) NOT NULL,
+  `layout_type` int(3) unsigned NOT NULL,
+  `toppage_col` int(3) unsigned NOT NULL,
+  `subpage_col` int(3) unsigned NOT NULL,
+  `center_block` int(3) unsigned NOT NULL,
+  `site_width` int(5) unsigned NOT NULL,
+  `content_width` int(5) unsigned NOT NULL,
+  `left_width` int(5) unsigned NOT NULL,
+  `right_width` int(5) unsigned NOT NULL,
+  `color_pattern` int(3) unsigned NOT NULL,
+  `left_float` int(3) unsigned NOT NULL,
+  `color_scheme` text NOT NULL,
+  `description` text NOT NULL,
+  `posttime` int(11) unsigned NOT NULL,
+  PRIMARY KEY  (`setting_id`)) ENGINE=MyISAM;
+

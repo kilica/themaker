@@ -1,0 +1,191 @@
+@charset'UTF-8';
+
+/* ----- HTML tag ----- */
+body {
+    background-color:#ffffff;
+    color:#000000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #1924B1
+}
+
+a:visited , a:link , a:active {
+    color:#274E7D;
+}
+
+a:hover {
+    color:#6899D3;
+    background-color:#0E53A7;
+}
+/* ----- /HTML tag ----- */
+
+#Container {
+}
+
+/* ----- HeadColumn ----- */
+#HeadColumn {
+    background-color:#4284D3;
+}
+
+
+/* ----- Main Menu ----- */
+
+#NaviMenu {
+    background-color:    #6899D3;
+}
+#NaviMenu li {
+}
+#NaviMenu a:visited , #NaviMenu a:link {
+    color:    #04346C;
+}
+#NaviMenu a:hover, #NaviMenu a:active {
+    color:    #6899D3;
+    background-color:    #04346C;
+}
+
+/* ----- Sub Menu ----- */
+
+#SubMenu {
+    background-color:    #04346C;
+}
+#SubMenu li {
+}
+#SubMenu a:visited , #SubMenu a:link {
+    color:    #6899D3;
+}
+#SubMenu a:hover, #SubMenu a:active {
+    color:    #6899D3
+    background-color:    #6899D3;
+}
+
+/* ----- Block default ----- */
+dt.blockTitle {
+    color: #04346C;
+    background-color: #eeeeee;
+}
+
+/* ----- LeftSide ----- */
+#LeftSide {
+    background-color:#;
+}
+#LeftSide dt.blockTitle {
+    background-color:inherit;
+    color: #04346C;
+    background-color: #eeeeee;
+}
+#LeftSide dd.blockContent {
+    background-color:inherit;
+}
+
+/* ----- RightSide ----- */
+#RightSide {
+    background-color:#;
+}
+#RightSide dt.blockTitle {
+    color: #04346C;
+    background-color: #eeeeee;
+}
+
+#Footer {
+    background-color:#6899D3;
+    color:#04346C;
+}
+#Footer a{
+    color: #0E53A7;
+}
+
+/* ----- for common CSS ----- */
+
+.outer     {
+    border: 1px solid #04346C;
+}
+
+th {
+    background-color: #dddddd;
+    color:#04346C;
+}
+.head {
+    background-color: #eeeeee;
+}
+.even {
+    background-color: #eeeeee;
+}
+.odd {
+    background-color: #ffffff;
+}
+.foot {
+    background-color: #4284D3;
+}
+
+tr.head td {
+    background-color: #ffffff;
+}
+tr.even td {
+    background-color: #eeeeee;
+}
+tr.odd td {
+    background-color: #ffffff;
+}
+
+div.errorMsg {
+    background-color: #1924B1;
+    color: #ffffff;
+    border: 1px solid #DDDDFF;
+}
+div.confirmMsg {
+    background-color: #7279D8;
+    color: #081073;
+    border: 1px solid #DDDDFF;
+}
+div.resultMsg {
+    background-color : #7279D8;
+    color: #081073;
+    border: 1px solid #666666;
+}
+div.xoopsCode {
+    background: #ffffff;
+    color: #4284D3;
+    border: 1px inset #000080;
+}
+div.xoopsQuote {
+    background: #ffffff;
+    color: #04346C;
+    border: 1px inset #000080;
+}
+
+.comUserStat {
+    color: #1924B1;
+}
+.comUserStatus {
+    color: #1924B1;
+}
+/* ----- for module CSS ----- */
+
+/*  for news & xf-section  */
+.itemHead{
+    background-color: #6899D3;
+    color: #04346C;
+}
+.itemInfo{
+    color:#04346C;
+}
+
+.itemTitle {
+    color: #ffcccc;
+    background-color: transparent;
+}
+.itemTitle a {
+    color: #0E53A7;
+    background-color: transparent;
+}
+.pagenavi a {
+    border:1px solid #1924B1;
+    background-color:#7279D8;
+    color:#081073;
+}
+.pagenavi b {
+    border:1px solid #ffffff;
+    background-color:#ffffff;
+    color:#1924B1;
+}

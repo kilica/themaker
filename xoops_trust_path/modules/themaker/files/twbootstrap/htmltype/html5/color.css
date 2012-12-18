@@ -1,0 +1,194 @@
+@charset'UTF-8';
+
+/* ----- HTML tag ----- */
+body {
+    background-color:{{bgcolor-body}};
+    color:{{color-body}};
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: {{color-h1-h6}}
+}
+
+a:visited , a:link , a:active {
+    color:{{color-link}};
+}
+
+a:hover {
+    color:{{color-link-hover}};
+    background-color:{{bgcolor-link-hover}};
+}
+/* ----- /HTML tag ----- */
+
+#Container {
+}
+
+/* ----- HeadColumn ----- */
+#HeadColumn {
+    background-color:{{bgcolor-head}};
+}
+
+
+/* ----- Main Menu ----- */
+
+#NaviMenu {
+    background-color:    {{bgcolor-menu}};
+}
+#NaviMenu li {
+}
+#NaviMenu a:visited , #NaviMenu a:link {
+    color:    {{color-menu}};
+}
+#NaviMenu a:hover, #NaviMenu a:active {
+    color:    {{color-menu-active}};
+    background-color:    {{bgcolor-menu-active}};
+}
+
+/* ----- Sub Menu ----- */
+
+#SubMenu {
+    background-color:    {{bgcolor-submenu}};
+}
+#SubMenu li {
+}
+#SubMenu a:visited , #SubMenu a:link {
+    color:    {{color-submenu}};
+}
+#SubMenu a:hover, #SubMenu a:active {
+    color:    {{color-submenu}}
+    background-color:    {{bgcolor-submenu-active}};
+}
+
+/* ----- Block default ----- */
+dt.blockTitle {
+    color: {{color-block-title}};
+    background-color: {{bgcolor-block-title}};
+    border-left-color: {{border-left-block-title}};
+}
+
+/* ----- LeftSide ----- */
+#LeftSide {
+    background-color:{{bgcolor-side}};
+}
+#LeftSide dt.blockTitle {
+    background-color:inherit;
+    color: {{color-block-title-side}};
+    background-color: {{bgcolor-block-title-side}};
+    border-left-color: {{border-left-block-title-side}};
+}
+#LeftSide dd.blockContent {
+    background-color:inherit;
+}
+
+/* ----- RightSide ----- */
+#RightSide {
+    background-color:{{bgcolor-side}};
+}
+#RightSide dt.blockTitle {
+    color: {{color-block-title-side}};
+    background-color: {{bgcolor-block-title-side}};
+    border-left-color: {{border-left-block-title-side}};
+}
+
+#Footer {
+    background-color:{{bgcolor-footer}};
+    color:{{color-footer}};
+}
+#Footer a{
+    color: {{color-footer-link}};
+}
+
+/* ----- for common CSS ----- */
+
+.outer     {
+    border: 1px solid {{border-color-table}};
+}
+
+th {
+    background-color: {{bgcolor-table-th}};
+    color:{{color-table-th}};
+}
+.head {
+    background-color: {{bgcolor-table-head}};
+}
+.even {
+    background-color: {{bgcolor-table-even}};
+}
+.odd {
+    background-color: {{bgcolor-table-odd}};
+}
+.foot {
+    background-color: {{bgcolor-table-foot}};
+}
+
+tr.head td {
+    background-color: {{bgcolor-table-td}};
+}
+tr.even td {
+    background-color: {{bgcolor-table-td-even}};
+}
+tr.odd td {
+    background-color: {{bgcolor-table-td-odd}};
+}
+
+div.errorMsg {
+    background-color: {{bgcolor-message-error}};
+    color: {{color-message-error}};
+    border: 1px solid #DDDDFF;
+}
+div.confirmMsg {
+    background-color: {{bgcolor-message-confirm}};
+    color: {{color-message-confirm}};
+    border: 1px solid #DDDDFF;
+}
+div.resultMsg {
+    background-color : {{bgcolor-message-result}};
+    color: {{color-message-result}};
+    border: 1px solid #666666;
+}
+div.xoopsCode {
+    background: {{bgcolor-xoopsCode}};
+    color: {{color-xoopsCode}};
+    border: 1px inset #000080;
+}
+div.xoopsQuote {
+    background: {{bgcolor-xoopsQuote}};
+    color: {{color-xoopsQuote}};
+    border: 1px inset #000080;
+}
+
+.comUserStat {
+    color: {{color-comUserStat}};
+}
+.comUserStatus {
+    color: {{color-comUserStatus}};
+}
+/* ----- for module CSS ----- */
+
+/*  for news & xf-section  */
+.itemHead{
+    background-color: {{bgcolor-itemHead}};
+    color: {{color-itemHead}};
+}
+.itemInfo{
+    color:{{color-itemInfo}};
+}
+
+.itemTitle {
+    color: #ffcccc;
+    background-color: transparent;
+}
+.itemTitle a {
+    color: {{color-itemTitle-link}};
+    background-color: transparent;
+}
+.pagenavi a {
+    border:1px solid {{bordercolor-pagenavi-link}};
+    background-color:{{bgcolor-pagenavi-link}};
+    color:{{color-pagenavi-link}};
+}
+.pagenavi b {
+    border:1px solid {{bordercolor-pagenavi-bold}};
+    background-color:{{bgcolor-pagenavi-bold}};
+    color:{{color-pagenavi-bold}};
+}

@@ -1,0 +1,38 @@
+<{math assign=mainGrid equation="9+(1-L)*(1-R)*3" L=$xoops_showlblock R=$xoops_showrblock}>
+<div id="ContentWrapper" class="clearfix">
+<div id="MainColumn" class="grid_<{$mainGrid}> alpha">
+<{if $xoops_contents}>
+<div id="Content" class="<{$xoops_dirname}>"><{$xoops_contents}></div>
+<{/if}>
+{{CenterBlock}}
+</div><!-- MainColumn -->
+<{if $xoops_showlblock==1||$xoops_showrblock==1}>
+<div class="sideColumn grid_3 omega">
+<{if $xoops_showlblock == 1}>
+  <div id="LeftSide">
+  <dl>
+  <{foreach item=block from=$xoops_lblocks}>
+    <{if substr($block.title,-4) != "none"}>
+    <dt class="blockTitle"><{$block.title}></dt>
+    <{/if}>
+    <dd class="blockContent"><{$block.content}></dd>
+  <{/foreach}>
+  </dl>
+  </div><!-- LeftSide -->
+<{/if}>
+
+<{if $xoops_showrblock == 1}>
+  <div id="RightSide">
+  <dl>
+  <{foreach item=block from=$xoops_rblocks}>
+    <{if substr($block.title,-4) != "none"}>
+    <dt class="blockTitle"><{$block.title}></dt>
+    <{/if}>
+    <dd class="blockContent"><{$block.content}></dd>
+  <{/foreach}>
+  </dl>
+  </div><!-- RightSide -->
+<{/if}>
+</div><!-- SideColumn -->
+<{/if}>
+</div><!-- ContentWrapper -->

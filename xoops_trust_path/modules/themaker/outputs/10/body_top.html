@@ -1,0 +1,41 @@
+<{math assign=mainGrid equation="12+(-L-R)*3" L=$xoops_showlblock R=$xoops_showrblock}>
+
+<div id="ContentWrapper" class="clearfix">
+
+<{if $xoops_showlblock == 1}>
+<div class="sideColumn grid_3 alpha">
+  <div id="LeftSide">
+    <dl>
+    <{foreach item=block from=$xoops_lblocks}>
+      <{if substr($block.title,-4) != "none"}>
+        <dt class="blockTitle"><{$block.title}></dt>
+      <{/if}>
+      <dd class="blockContent"><{$block.content}></dd>
+    <{/foreach}>
+    </dl>
+  </div><!-- LeftSide -->
+</div><!-- sideColumn" -->
+<{/if}>
+
+<div id="MainColumn" class="grid_<{$mainGrid}><{if ! $xoops_showlblock}> alpha<{/if}><{if ! $xoops_showrblock}> omega<{/if}>">
+<{if $xoops_contents}>
+<div id="Content" class="<{$xoops_dirname}>"><{$xoops_contents}></div>
+<{/if}>
+<{include file="`$smarty.const.XOOPS_THEME_PATH`/`$xoops_theme`/center.html"}>
+</div><!-- MainColumn -->
+
+<{if $xoops_showrblock == 1}>
+<div class="sideColumn grid_3 omega">
+  <div id="RightSide">
+    <dl>
+    <{foreach item=block from=$xoops_rblocks}>
+      <{if substr($block.title,-4) != "none"}>
+        <dt class="blockTitle"><{$block.title}></dt>
+      <{/if}>
+      <dd class="blockContent"><{$block.content}></dd>
+    <{/foreach}>
+    </dl>
+  </div><!-- RightSide -->
+</div><!-- sideColumn -->
+<{/if}>
+</div><!-- ContentWrapper -->

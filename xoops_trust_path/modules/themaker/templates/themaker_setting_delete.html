@@ -1,0 +1,31 @@
+<div class="themaker">
+<h1><{$smarty.const._MD_THEMAKER_LANG_SETTING_DELETE}></h1>
+
+<div class="confirm"><{$smarty.const._MD_THEMAKER_MESSAGE_CONFIRM_DELETE}></div>
+
+<form action="<{xoops_cooluri dirname=$dirname dataname=setting action=delete}>" method="post">
+  <dl class="edit">
+  <dt><{$smarty.const._MD_THEMAKER_LANG_SETTING_ID}></dt>
+  <dd><{$object->getShow('setting_id')}></dd>
+  <dt><{$smarty.const._MD_THEMAKER_LANG_TITLE}></dt>
+  <dd><{$object->getShow('title')}></dd>
+  <dt><{$smarty.const._MD_THEMAKER_LANG_UID}></dt>
+  <dd><{$object->getShow('uid')|xoops_user:user_name}></dd>
+  <dt><{$smarty.const._MD_THEMAKER_LANG_HTML_TYPE}></dt>
+  <dd><{$object->getShow('html_type')}></dd>
+  <dt><{$smarty.const._MD_THEMAKER_LANG_COLOR_SCHEME}></dt>
+  <dd><{$object->getShow('color_scheme')}></dd>
+  <dt><{$smarty.const._MD_THEMAKER_LANG_DESCRIPTION}></dt>
+  <dd><{$object->getShow('description')}></dd>
+  <dt><{$smarty.const._MD_THEMAKER_LANG_POSTTIME}></dt>
+  <dd><{$object->getShow('posttime')|xoops_formattimestamp:m}></dd>
+
+    <dd>
+      <{xoops_token form=$actionForm}>
+      <{xoops_input type=hidden name=setting_id value=$actionForm->get('setting_id')}>
+      <input type="submit" class="formButton" value="<{$smarty.const._DELETE}>"/>
+      <input type="submit" class="formButton" value="<{$smarty.const._CANCEL}>" name="_form_control_cancel"/>
+    </dd>
+  </dl>
+</form>
+</div>

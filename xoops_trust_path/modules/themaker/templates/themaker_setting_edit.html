@@ -1,0 +1,105 @@
+<div class="themaker">
+<h1><{$smarty.const._MD_THEMAKER_LANG_SETTING_EDIT}></h1>
+<{if $actionForm->hasError()}>
+  <ul class="error">
+    <{foreach item=message from=$actionForm->getErrorMessages()}>
+      <li><{$message|xoops_escape}></li>
+    <{/foreach}>
+  </ul>
+<{/if}>
+<form action="<{xoops_cooluri dirname=$dirname dataname=setting action=edit}>" method="post">
+  <dl class="edit">
+
+  <{xoops_input type=hidden name=setting_id value=$actionForm->get('setting_id')}>
+  <{xoops_input type=hidden name=site_width value=$actionForm->get('site_width')}>
+  <{xoops_input type=hidden name=content_width value=$actionForm->get('content_width')}>
+  <{xoops_input type=hidden name=left_width value=$actionForm->get('left_width')}>
+  <{xoops_input type=hidden name=right_width value=$actionForm->get('right_width')}>
+  <{xoops_input type=hidden name=left_float value=$actionForm->get('left_float')}>
+
+  <dt class="required"><{$smarty.const._MD_THEMAKER_LANG_TITLE}></dt>
+  <dd><{xoops_input type=text name=title value=$actionForm->get('title') size=20 maxlength=255 class="required"}></dd>
+<{*
+  <dt class="required"><{$smarty.const._MD_THEMAKER_LANG_HTML_TYPE}></dt>
+  <dd>
+    <{html_options name="html_type" options=$enum_htmlType->getOptionList() selected=$actionForm->get('html_type')}>
+  </dd>
+*}>
+  <dt class="required"><{$smarty.const._MD_THEMAKER_LANG_LAYOUT_TYPE}></dt>
+  <dd>
+    <{html_options name="layout_type" options=$enum_layoutType->getOptionList() selected=$actionForm->get('layout_type')}>
+  </dd>
+
+  <dt class="required"><{$smarty.const._MD_THEMAKER_LANG_TOPPAGE_COL}></dt>
+  <dd>
+    <{html_options name="toppage_col" options=$enum_column->getOptionList() selected=$actionForm->get('toppage_col')}>
+  </dd>
+
+  <dt><{$smarty.const._MD_THEMAKER_LANG_SUBPAGE_COL}></dt>
+  <dd>
+    <{html_options name="subpage_col" options=$enum_column->getOptionList() selected=$actionForm->get('subpage_col')}>
+  </dd>
+
+  <dt class="required"><{$smarty.const._MD_THEMAKER_LANG_CENTER_BLOCK}></dt>
+  <dd>
+    <{html_options name="center_block" options=$enum_centerBlock->getOptionList() selected=$actionForm->get('center_block')}>
+  </dd>
+
+<{*
+  <dt><{$smarty.const._MD_THEMAKER_LANG_SITE_WIDTH}></dt>
+  <dd><{xoops_input type=text name=site_width value=$actionForm->get('site_width') size=10}></dd>
+
+  <dt><{$smarty.const._MD_THEMAKER_LANG_CONTENT_WIDTH}></dt>
+  <dd><{xoops_input type=text name=content_width value=$actionForm->get('content_width') size=10}></dd>
+
+  <dt><{$smarty.const._MD_THEMAKER_LANG_LEFT_WIDTH}></dt>
+  <dd><{xoops_input type=text name=left_width value=$actionForm->get('left_width') size=10}></dd>
+
+  <dt><{$smarty.const._MD_THEMAKER_LANG_RIGHT_WIDTH}></dt>
+  <dd><{xoops_input type=text name=right_width value=$actionForm->get('right_width') size=10}></dd>
+
+  <dt><{$smarty.const._MD_THEMAKER_LANG_COLOR_PATTERN}></dt>
+  <dd>
+    <{html_options name="color_pattern" options=$enum_float->getOptionList() selected=$actionForm->get('color_pattern')}>
+  </dd>
+
+  <dt><{$smarty.const._MD_THEMAKER_LANG_COLOR_PATTERN}></dt>
+  <dd>
+    <{html_options name="left_float" options=$enum_float->getOptionList() selected=$actionForm->get('left_float')}>
+  </dd>
+*}>
+
+
+  <dt><{$smarty.const._MD_THEMAKER_LANG_COLOR_SCHEME}></dt>
+  <dd><{xoops_textarea type=text name=color_scheme value=$actionForm->get('color_scheme')}><br />
+  <{$smarty.const._MD_THEMAKER_DESC_COLOR_SCHEME}>
+  </dd>
+
+  <dt><{$smarty.const._MD_THEMAKER_LANG_COLOR_PATTERN}></dt>
+  <dd>
+  <select name="color_pattern">
+    <{foreach item=worksheet from=$worksheetList key=k}>
+    <option value="<{$k}>"<{if $k==$actionForm->get('color_pattern')}> selected="selected"<{/if}>><{$worksheet}></option>
+    <{/foreach}>
+  </select>
+  </dd>
+
+  <dt><{$smarty.const._MD_THEMAKER_LANG_DESCRIPTION}></dt>
+  <dd><{xoops_textarea type=text name=description value=$actionForm->get('description')}></dd>
+
+    <{if $tag_dirname}>
+    <dt><{$smarty.const._TAG}></dt>
+    <dd>
+      <{xoops_input type=text name=tags value=$actionForm->get('tags')}>
+      <{legacy_tag_select tDirname=$tag_dirname tags=$object->mTag}>
+    </dd>
+    <{/if}>
+    <dt></dt>
+    <dd>
+      <{xoops_token form=$actionForm}>
+      <input type="submit" value="<{$smarty.const._SUBMIT}>" />
+      <input type="submit" value="<{$smarty.const._CANCEL}>" name="_form_control_cancel" />
+    </dd>
+  </dl>
+</form>
+</div>

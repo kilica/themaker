@@ -1,0 +1,51 @@
+<div class="themaker">
+<h1><{$smarty.const._MD_THEMAKER_LANG_SETTING}><{$smarty.const._LIST}></h1>
+<ul class="hmenu">
+  <li><a href="<{xoops_cooluri dirname=$dirname dataname=$dataname action=edit}>"><{$smarty.const._MD_THEMAKER_LANG_ADD_A_NEW_SETTING}></a></li>
+</ul>
+
+<{if count($objects) > 0}>
+  <div class="pagenavi"><{xoops_pagenavi pagenavi=$pageNavi}></div>
+  <table class="outer" summary="">
+    <thead>
+      <tr>
+        <th>
+          <{$smarty.const._MD_THEMAKER_LANG_TITLE}>
+        </th>
+        <th>
+          <{$smarty.const._MD_THEMAKER_LANG_UID}>
+          <a href="<{$pageNavi->renderUrlForSort()}>&amp;<{$pageNavi->getPrefix()}>sort=<{$smarty.const.THEMAKER_SETTING_SORT_KEY_UID}>"><img src="images/up.gif" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>" /></a>
+          <a href="<{$pageNavi->renderUrlForSort()}>&amp;<{$pageNavi->getPrefix()}>sort=-<{$smarty.const.THEMAKER_SETTING_SORT_KEY_UID}>"><img src="images/down.gif" alt="<{$smarty.const._DESCENDING}>" title="<{$smarty.const._DESCENDING}>" /></a>
+        </th>
+        <th>
+          <{$smarty.const._MD_THEMAKER_LANG_HTML_TYPE}>
+        </th>
+        <th>
+          <{$smarty.const._MD_THEMAKER_LANG_LAYOUT_TYPE}>
+        </th>
+        <th>
+          <{$smarty.const._MD_THEMAKER_LANG_POSTTIME}>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <{foreach item=obj from=$objects}>
+        <tr class="<{cycle values='odd,even'}>">
+          <td>
+            <a href="<{xoops_cooluri dirname=$dirname dataname=$dataname data_id=$obj->getShow('setting_id') action=view}>"><{$obj->getShow('title')}></a>
+            <{if $xoops_isadmin || $xoops_userid===$obj->getShow('uid')}>
+            [<a href="<{xoops_cooluri dirname=$dirname dataname=$dataname data_id=$obj->getShow('setting_id') action=edit}>"><{$smarty.const._EDIT}></a>] 
+            [<a href="<{xoops_cooluri dirname=$dirname dataname=$dataname data_id=$obj->getShow('setting_id') action=delete}>"><{$smarty.const._DELETE}></a>]
+            <{/if}>
+          </td>
+          <td><{$obj->getShow('uid')|xoops_user:user_name}></td>
+          <td><{$enum_htmlType->getMessage($obj->getShow('html_type'))}></td>
+          <td><{$enum_layoutType->getMessage($obj->getShow('layout_type'))}></td>
+          <td><{$obj->getShow('posttime')|xoops_formattimestamp:m}></td>
+        </tr>
+      <{/foreach}>
+    </tbody>
+  </table>
+  <div class="pagenavi"><{xoops_pagenavi pagenavi=$pageNavi}></div>
+<{/if}>
+</div>

@@ -1,0 +1,42 @@
+  <div id="CenterColumn" class="widthCC_L<{$xoops_showlblock}>_R<{$xoops_showrblock}>">
+
+  <{if $xoops_showcblock == 1}>
+    <div id="CenterCColumn">
+    <{foreach item=block from=$xoops_ccblocks}>
+      <dl>
+      <{if substr($block.title,-4) != "none"}>
+      <dt class="blockTitle"><{$block.title}></dt>
+      <{/if}>
+      <dd class="blockContent"><{$block.content}></dd>
+      </dl>
+    <{/foreach}>
+    </div><!-- CenterCColumn -->
+  <{/if}>
+
+  <{if $xoops_clblocks}>
+    <div id="CenterLColumn" class="widthCLR_L<{$xoops_showlblock}>_R<{$xoops_showrblock}>">
+    <{foreach item=block from=$xoops_clblocks}>
+      <dl>
+      <{if substr($block.title,-4) != "none"}>
+      <dt class="blockTitle"><{$block.title}></dt>
+      <{/if}>
+      <dd class="blockContent"><{$block.content}></dd>
+      </dl>
+    <{/foreach}>
+    </div><!-- CenterLColumn -->
+  <{/if}>
+
+  <{if $xoops_crblocks}>
+    <div id="CenterRColumn" class="widthCLR_L<{$xoops_showlblock}>_R<{$xoops_showrblock}>">
+    <{foreach item=block from=$xoops_crblocks}>
+      <dl>
+      <{if substr($block.title,-4) != "none"}>
+      <dt class="blockTitle"><{$block.title}></dt>
+      <{/if}>
+      <dd class="blockContent"><{$block.content}></dd>
+      </dl>
+    <{/foreach}>
+    </div><!-- CenterRColumn -->
+  <{/if}>
+
+  </div><!-- CenterColumn -->

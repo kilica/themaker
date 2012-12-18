@@ -1,0 +1,31 @@
+<div id="ContentWrapper" class="alpha omega clearfix">
+<{if $xoops_contents}>
+<div id="Content" class="<{$xoops_dirname}> grid_12 alpha omega"><{$xoops_contents}></div>
+<{/if}>
+
+<{if $xoops_showlblock==1 || $xoops_showrblock == 1}>
+<div id="SideColumn" class="grid_12 alpha omega">
+  <div id="LeftSide" class="grid_6 alpha">
+  <dl>
+  <{foreach item=block from=$xoops_lblocks}>
+    <{if substr($block.title,-4) != "none"}>
+    <dt class="blockTitle"><{$block.title}></dt>
+    <{/if}>
+    <dd class="blockContent"><{$block.content}></dd>
+  <{/foreach}>
+  </dl>
+  </div><!-- LeftSide -->
+  <div id="RightSide" class="grid_6 omega">
+  <dl>
+  <{foreach item=block from=$xoops_rblocks}>
+    <{if substr($block.title,-4) != "none"}>
+    <dt class="blockTitle"><{$block.title}></dt>
+    <{/if}>
+    <dd class="blockContent"><{$block.content}></dd>
+  <{/foreach}>
+  </dl>
+  </div><!-- RightSide -->
+</div><!-- SideColumn -->
+<{/if}>
+{{CenterBlock}}
+</div><!-- ContentWrapper -->

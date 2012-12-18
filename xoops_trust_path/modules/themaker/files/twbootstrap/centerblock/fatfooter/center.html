@@ -1,0 +1,34 @@
+  <div id="CenterColumn" class="row">
+
+  <div id="CenterLColumn" class="span4">
+    <{foreach item=block from=$xoops_clblocks}>
+    <dl>
+    <{if substr($block.title,-4) != "none"}>
+    <dt class="blockTitle"><{$block.title}></dt>
+    <{/if}>
+    <dd class="blockContent"><{$block.content}></dd>
+    </dl>
+    <{/foreach}>
+  </div><!-- CenterLColumn -->
+  <div id="CenterCColumn" class="span4">
+    <{foreach item=block from=$xoops_ccblocks}>
+    <dl>
+    <{if substr($block.title,-4) != "none"}>
+    <dt class="blockTitle"><{$block.title}></dt>
+    <{/if}>
+    <dd class="blockContent"><{$block.content}></dd>
+    </dl>
+    <{/foreach}>
+  </div><!-- CenterCColumn -->
+  <div id="CenterRColumn" class="span4">
+    <{foreach item=block from=$xoops_crblocks}>
+    <dl>
+    <{if substr($block.title,-4) != "none"}>
+    <dt class="blockTitle"><{$block.title}></dt>
+    <{/if}>
+    <dd class="blockContent"><{$block.content}></dd>
+    </dl>
+    <{/foreach}>
+  </div><!-- CenterRColumn -->
+
+  </div><!-- CenterColumn -->

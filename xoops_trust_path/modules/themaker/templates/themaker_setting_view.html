@@ -1,0 +1,47 @@
+<div class="themaker">
+<h1><{$smarty.const._MD_THEMAKER_LANG_SETTING}><{$smarty.const._VIEW}></h1>
+<ul class="hmenu">
+<{if $object->getShow('uid') || $xoops_isadmin}>
+<li><a href="<{xoops_cooluri dirname=$dirname dataname=setting data_id=$object->getShow('setting_id') action=edit}>"><{$smarty.const._EDIT}></a></li>
+<li><a href="<{xoops_cooluri dirname=$dirname dataname=setting data_id=$object->getShow('setting_id') action=delete}>"><{$smarty.const._DELETE}></a></li>
+<{/if}>
+<li><a href="<{xoops_cooluri dirname=$dirname dataname=setting data_id=$object->getShow('setting_id') action=wizard}>"><{$smarty.const._MD_THEMAKER_LANG_GENERATE}></a></li>
+<{if $canDownload===true}>
+<li><a href="<{xoops_cooluri dirname=$dirname dataname=setting data_id=$object->getShow('setting_id') action=download}>"><{$smarty.const._MD_THEMAKER_LANG_DOWNLOAD}></a></li>
+<{/if}>
+</ul>
+
+
+<dl class="view">
+  <dt><{$smarty.const._MD_THEMAKER_LANG_TITLE}></dt>
+  <dd><{$object->getShow('title')}></dd>
+  <dt><{$smarty.const._MD_THEMAKER_LANG_UID}></dt>
+  <dd><{$object->getShow('uid')|xoops_user:user_name}></dd>
+  <dt><{$smarty.const._MD_THEMAKER_LANG_HTML_TYPE}></dt>
+  <dd><{$enum_htmlType->getMessage($object->getShow('html_type'))}></dd>
+  <dt><{$smarty.const._MD_THEMAKER_LANG_LAYOUT_TYPE}></dt>
+  <dd><{$enum_layoutType->getMessage($object->getShow('layout_type'))}></dd>
+  <dt><{$smarty.const._MD_THEMAKER_LANG_TOPPAGE_COL}></dt>
+  <dd><{$enum_column->getMessage($object->getShow('toppage_col'))}></dd>
+  <dt><{$smarty.const._MD_THEMAKER_LANG_SUBPAGE_COL}></dt>
+  <dd><{$enum_column->getMessage($object->getShow('subpage_col'))}></dd>
+  <dt><{$smarty.const._MD_THEMAKER_LANG_CENTER_BLOCK}></dt>
+  <dd><{$enum_centerBlock->getMessage($object->getShow('center_block'))}></dd>
+  <dt><{$smarty.const._MD_THEMAKER_LANG_COLOR_SCHEME}></dt>
+  <dd><{$object->getShow('color_scheme')}></dd>
+  <dt><{$smarty.const._MD_THEMAKER_LANG_DESCRIPTION}></dt>
+  <dd><{$object->getShow('description')}></dd>
+  <dt><{$smarty.const._MD_THEMAKER_LANG_POSTTIME}></dt>
+  <dd><{$object->getShow('posttime')|xoops_formattimestamp:m}></dd>
+
+    <!-- tag -->
+    <{if count($object->mTag)>0}>
+    <dt class="tagList"><{$smarty.const._TAG}>: </dt>
+    <dd class="tagList">
+    <{foreach item=tag from=$object->mTag}>
+     <{assign var=tagurl value=$tag|xoops_escape:url}>
+      <span><a href="<{xoops_cooluri dirname=$dirname dataname=$dataname query="tag=`$tag`"}>"><{$tag|xoops_escape}></a></span> 
+    <{/foreach}>
+    <{/if}>
+</dl>
+</div>
